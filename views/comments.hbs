@@ -1,0 +1,56 @@
+{{> _player}}
+
+
+{{#contentFor "sidebar"}}
+{{> _sidebar_playlists}}
+{{/contentFor}}
+
+
+{{#contentFor "scripts"}}
+<script src="/javascripts/search.js"></script>
+
+<script>
+    var audioTracks = {{{tracksjson}}};
+</script>
+{{/contentFor}}
+
+
+{{#hascomments}}
+<table class="table table-condensed table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Sender</th>
+            <th>Date</th>
+            <th>Comment</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#../comments}}
+        <tr>
+            <td>Test User</td>
+            <td>{{created_on}}</td>
+            <td>{{comment}}</td>
+        </tr>
+        {{/../comments}}
+    </tbody>
+
+</table>
+{{/hascomments}}
+
+{{^hascomments}}
+<div style="padding: 20px 20px 0 20px;">
+There are no comments for this track!
+</div>
+{{/hascomments}}
+
+<div style="padding: 20px;">
+<form class="form" method="post" action="/comments/add/{{trackid}}">
+Enter your comment below. An administrator will reply as soon as possible:<br><br>
+
+<textarea name="comment" style="width: 350px; height: 150px;"></textarea><br><br>
+
+<button type="submit" class="btn btn-primary">Send comment</button>
+</form>
+</div>
+

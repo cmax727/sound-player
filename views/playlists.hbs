@@ -1,0 +1,138 @@
+{{> _noplayer}}
+
+{{#contentFor "scripts"}}
+<script src="/javascripts/bootstrap.js"></script>
+<script src="/javascripts/playlists.js"></script>
+
+<style>
+    body{
+        margin-top: 212px;
+    }
+    .s-fresult{
+        display:none;
+    }
+    .s-playlist{
+        height : 100%;
+        overflow-y: visible;
+    }
+    #right_list2{
+        width:100%;
+    }
+    .music-header-bottom {
+        display: block !important;
+    }
+    #bar_browse {
+        display: block !important;
+        outline: 1px solid #000;
+    }
+
+</style>
+
+{{/contentFor}}
+
+{{#contentFor "sidebar"}}
+<div class="music-control playlist-create section-header nav-header" style="padding: 33px 0; color:#828282 !important;">
+    <img src="/images/create-pl.png"> Create New Playlist </img>
+
+</div>
+{{/contentFor}}
+
+{{#hasplaylists}}
+
+<table class="table table-condensed table-striped table-hover music-track-table">
+    <thead>
+        <tr class="section-header">
+            <th >Playlist</th>
+            <th>Number of Tracks</th>
+            <th>Delete Playlist</th>
+            <th>Package Playlist</th>
+         </tr>
+     </thead>
+
+     <tbody>
+         <tr>
+             <td><a href="/favorites">My Favorites</a></td>
+             <td>{{{favorites.length}}}</td>
+             <td><i class="">...</i></td>
+             <td><i class="icon-briefcase music-control favorite-package" plid="{{id}}" plname="{{name}}"></i></td>
+         </tr>
+         {{#../playlists}}
+         <tr>
+             <td><a href="/playlist/{{id}}">{{name}}</a></td>
+             <td>{{track_count}}</td>
+             <td><i class="icon-remove music-control playlist-delete" plid="{{id}}" plname="{{name}}"></i></td>
+             <td><i class="icon-briefcase music-control playlist-package" plid="{{id}}" plname="{{name}}"></i></td>
+         </tr>
+         {{/../playlists}}
+     </tbody>
+</table>
+{{/hasplaylists}}
+
+{{^hasplaylists}}
+No playlists found!
+{{/hasplaylists}}
+
+
+<div class="modal hide fade playlist-create-dialog">
+    <form method="post" action="/playlist/create">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3>Create a New Playlist</h3>
+        </div>
+        <div class="modal-body">
+            Enter the new playlist's name<br><br>
+
+            <input type="text" id="pl_name" name="name">
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Create Playlist</button>
+        </div>
+    </form>
+</div>
+
+
+<div class="modal hide fade playlist-delete-dialog">
+    <form method="post" action="/playlist/delete">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3>Delete a playlist</h3>
+        </div>
+        <input type="hidden" name="id" value="">
+        <div class="modal-body">
+            You are about to delete the playlist "<span class="delete-title"></span>"<br><br>
+
+            Do you want to proceed?
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-danger">Delete Playlist</button>
+        </div>
+    </form>
+</div>
+
+<div class="modal hide fade playlist-package-dialog">
+    <form method="post" action="/download/playlist/">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3>Package a playlist</h3>
+        </div>
+        <div class="modal-body">
+            <input type="hidden" name="type" value="ajax"/>
+            Which playlist would you like to package for download?<br><br>
+
+            <select id="playlist-select" name="id">
+                <option value="_">Select Playlist</option>
+                {{#playlists}}
+                <option value="{{id}}">{{name}}</option>
+                {{/playlists}}
+            </select><br>
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Package a playlist</button>
+        </div>
+    </form>
+</div>

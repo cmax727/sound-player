@@ -1,0 +1,158 @@
+--------------------------------------------------------------------------
+[2013-03-18 23:20:28] Run Gdollar!
+[2013-03-18 23:21:42] Start -->
+[2013-03-18 23:21:42] Pattern (AK1021-9)
+						 key: 692, mouse: 26, ctrl+tab: 05, alt+tab: 03 
+[2013-03-18 23:31:43] Pattern (OY1215-4)
+						 key: 480, mouse: 109, ctrl+tab: 05, alt+tab: 07 
+[2013-03-18 23:42:26] Pattern (KS1022-5)
+						 key: 551, mouse: 74, ctrl+tab: 05, alt+tab: 01 
+[2013-03-18 23:52:55] Pattern (OY1215-4)
+						 key: 467, mouse: 135, ctrl+tab: 06, alt+tab: 02 
+[2013-03-19 00:03:17] Pattern (KS1022-5)
+						 key: 561, mouse: 72, ctrl+tab: 04, alt+tab: 03 
+[2013-03-19 00:13:26] Pattern (AK1021-9)
+						 key: 692, mouse: 26, ctrl+tab: 08, alt+tab: 05 
+[2013-03-19 00:23:28] Pattern (QP1121-3)
+						 key: 405, mouse: 126, ctrl+tab: 04, alt+tab: 03 
+[2013-03-19 00:33:53] Pattern (AK1021-9)
+						 key: 750, mouse: 26, ctrl+tab: 06, alt+tab: 02 
+[2013-03-19 00:44:12] Pattern (KS1022-5)
+						 key: 508, mouse: 62, ctrl+tab: 07, alt+tab: 04 
+[2013-03-19 00:54:23] Pattern (QP1121-3)
+						 key: 396, mouse: 123, ctrl+tab: 03, alt+tab: 05 
+[2013-03-19 01:04:54] Pattern (KS1022-5)
+						 key: 555, mouse: 68, ctrl+tab: 06, alt+tab: 03 
+[2013-03-19 01:15:00] Pattern (QP1121-3)
+						 key: 417, mouse: 126, ctrl+tab: 04, alt+tab: 04 
+[2013-03-19 01:25:38] Pattern (AK1021-9)
+						 key: 733, mouse: 29, ctrl+tab: 08, alt+tab: 04 
+[2013-03-19 01:36:00] Pattern (OY1215-4)
+						 key: 533, mouse: 90, ctrl+tab: 05, alt+tab: 03 
+[2013-03-19 01:46:37] Pattern (KS1022-5)
+						 key: 575, mouse: 72, ctrl+tab: 05, alt+tab: 04 
+[2013-03-19 01:56:58] Pattern (OY1215-4)
+						 key: 461, mouse: 113, ctrl+tab: 04, alt+tab: 03 
+[2013-03-19 02:07:22] Pattern (AK1021-9)
+						 key: 726, mouse: 24, ctrl+tab: 07, alt+tab: 04 
+[2013-03-19 02:17:24] Pattern (OY1215-4)
+						 key: 503, mouse: 99, ctrl+tab: 04, alt+tab: 04 
+[2013-03-19 02:28:00] Pattern (CP1104-7)
+						 key: 704, mouse: 27, ctrl+tab: 06, alt+tab: 01 
+[2013-03-19 02:38:05] Pattern (AK1021-9)
+						 key: 771, mouse: 23, ctrl+tab: 07, alt+tab: 05 
+[2013-03-19 02:48:21] Pattern (QP1121-3)
+						 key: 398, mouse: 120, ctrl+tab: 04, alt+tab: 02 
+[2013-03-19 02:59:01] Pattern (CP1104-7)
+						 key: 678, mouse: 29, ctrl+tab: 07, alt+tab: 02 
+[2013-03-19 03:09:14] Pattern (QP1121-3)
+						 key: 395, mouse: 132, ctrl+tab: 04, alt+tab: 02 
+[2013-03-19 03:19:21] Pattern (KS1022-5)
+						 key: 534, mouse: 82, ctrl+tab: 04, alt+tab: 03 
+[2013-03-19 03:29:36] Pattern (CP1104-7)
+						 key: 655, mouse: 31, ctrl+tab: 05, alt+tab: 02 
+[2013-03-19 03:39:37] Pattern (KS1022-5)
+						 key: 534, mouse: 72, ctrl+tab: 05, alt+tab: 03 
+[2013-03-19 03:49:40] Pattern (AK1021-9)
+						 key: 743, mouse: 26, ctrl+tab: 07, alt+tab: 03 
+[2013-03-19 03:59:53] Pattern (OY1215-4)
+						 key: 465, mouse: 135, ctrl+tab: 04, alt+tab: 03 
+[2013-03-19 04:10:28] Pattern (AK1021-9)
+						 key: 710, mouse: 29, ctrl+tab: 06, alt+tab: 06 
+[2013-03-19 04:20:41] Pattern (OY1215-4)
+						 key: 504, mouse: 114, ctrl+tab: 04, alt+tab: 02 
+[2013-03-19 04:31:08] Pattern (QP1121-3)
+						 key: 365, mouse: 144, ctrl+tab: 03, alt+tab: 03 
+[2013-03-19 04:41:37] Pattern (OY1215-4)
+						 key: 484, mouse: 97, ctrl+tab: 04, alt+tab: 00 
+[2013-03-19 04:52:04] Pattern (KS1022-5)
+						 key: 558, mouse: 75, ctrl+tab: 06, alt+tab: 04 
+[2013-03-19 05:02:28] Pattern (OY1215-4)
+						 key: 470, mouse: 129, ctrl+tab: 04, alt+tab: 03 
+[2013-03-19 05:12:38] Pattern (KS1022-5)
+						 key: 539, mouse: 67, ctrl+tab: 04, alt+tab: 03 
+[2013-03-19 05:22:48] Pattern (AK1021-9)
+						 key: 758, mouse: 25, ctrl+tab: 08, alt+tab: 04 
+[2013-03-19 05:33:14] Pattern (KS1022-5)
+						 key: 533, mouse: 77, ctrl+tab: 04, alt+tab: 04 
+[2013-03-19 05:43:16] Pattern (AK1021-9)
+						 key: 756, mouse: 26, ctrl+tab: 09, alt+tab: 03 
+[2013-03-19 05:53:38] Pattern (OY1215-4)
+						 key: 493, mouse: 87, ctrl+tab: 04, alt+tab: 03 
+[2013-03-19 06:03:42] Pattern (CP1104-7)
+						 key: 691, mouse: 28, ctrl+tab: 07, alt+tab: 01 
+[2013-03-19 06:14:06] Pattern (QP1121-3)
+						 key: 421, mouse: 114, ctrl+tab: 04, alt+tab: 03 
+[2013-03-19 06:24:17] Pattern (AK1021-9)
+						 key: 731, mouse: 25, ctrl+tab: 07, alt+tab: 02 
+[2013-03-19 06:34:23] Pattern (QP1121-3)
+						 key: 399, mouse: 126, ctrl+tab: 03, alt+tab: 02 
+[2013-03-19 06:44:25] Pattern (AK1021-9)
+						 key: 754, mouse: 26, ctrl+tab: 06, alt+tab: 04 
+[2013-03-19 06:54:43] Pattern (CP1104-7)
+						 key: 717, mouse: 25, ctrl+tab: 06, alt+tab: 05 
+[2013-03-19 07:04:58] Pattern (QP1121-3)
+						 key: 407, mouse: 132, ctrl+tab: 04, alt+tab: 02 
+[2013-03-19 07:15:13] Pattern (AK1021-9)
+						 key: 766, mouse: 25, ctrl+tab: 07, alt+tab: 02 
+[2013-03-19 07:25:31] Pattern (CP1104-7)
+						 key: 666, mouse: 46, ctrl+tab: 07, alt+tab: 04 
+[2013-03-19 07:35:50] Pattern (QP1121-3)
+						 key: 376, mouse: 114, ctrl+tab: 06, alt+tab: 00 
+[2013-03-19 07:46:23] Pattern (KS1022-5)
+						 key: 521, mouse: 60, ctrl+tab: 04, alt+tab: 02 
+[2013-03-19 07:56:28] Pattern (OY1215-4)
+						 key: 478, mouse: 84, ctrl+tab: 05, alt+tab: 06 
+[2013-03-19 08:06:36] Pattern (AK1021-9)
+						 key: 734, mouse: 26, ctrl+tab: 07, alt+tab: 03 
+[2013-03-19 08:17:03] Pattern (KS1022-5)
+						 key: 572, mouse: 71, ctrl+tab: 04, alt+tab: 03 
+[2013-03-19 08:27:15] Pattern (CP1104-7)
+[2013-03-19 08:30:14] Stop <--
+[2013-03-19 12:26:00] Start -->
+[2013-03-19 12:30:04] Stop <--
+[2013-03-19 12:51:50] Start -->
+						 key: 691, mouse: 30, ctrl+tab: 06, alt+tab: 03 
+[2013-03-19 12:54:49] Pattern (OY1215-4)
+						 key: 479, mouse: 123, ctrl+tab: 05, alt+tab: 00 
+[2013-03-19 13:05:20] Pattern (AK1021-9)
+						 key: 776, mouse: 25, ctrl+tab: 06, alt+tab: 04 
+[2013-03-19 13:15:40] Pattern (KS1022-5)
+						 key: 572, mouse: 90, ctrl+tab: 05, alt+tab: 05 
+[2013-03-19 13:26:22] Pattern (QP1121-3)
+						 key: 380, mouse: 126, ctrl+tab: 03, alt+tab: 04 
+[2013-03-19 13:36:36] Pattern (OY1215-4)
+						 key: 469, mouse: 113, ctrl+tab: 05, alt+tab: 00 
+[2013-03-19 13:46:47] Pattern (CP1104-7)
+						 key: 707, mouse: 33, ctrl+tab: 06, alt+tab: 07 
+[2013-03-19 13:57:00] Pattern (KS1022-5)
+						 key: 594, mouse: 71, ctrl+tab: 06, alt+tab: 02 
+[2013-03-19 14:07:35] Pattern (QP1121-3)
+[2013-03-19 14:09:07] Stop <--
+[2013-03-19 19:14:14] Start -->
+[2013-03-19 19:14:16] Stop <--
+[2013-03-19 19:14:23] Start -->
+						 key: 399, mouse: 132, ctrl+tab: 05, alt+tab: 02 
+[2013-03-19 19:22:55] Pattern (AK1021-9)
+						 key: 715, mouse: 26, ctrl+tab: 06, alt+tab: 04 
+[2013-03-19 19:33:00] Pattern (KS1022-5)
+						 key: 572, mouse: 73, ctrl+tab: 05, alt+tab: 01 
+[2013-03-19 19:43:23] Pattern (AK1021-9)
+						 key: 713, mouse: 27, ctrl+tab: 08, alt+tab: 07 
+[2013-03-19 19:53:39] Pattern (CP1104-7)
+						 key: 660, mouse: 30, ctrl+tab: 07, alt+tab: 05 
+[2013-03-19 20:03:49] Pattern (QP1121-3)
+						 key: 437, mouse: 132, ctrl+tab: 04, alt+tab: 03 
+[2013-03-19 20:14:22] Pattern (OY1215-4)
+						 key: 440, mouse: 109, ctrl+tab: 04, alt+tab: 02 
+[2013-03-19 20:24:31] Pattern (QP1121-3)
+						 key: 398, mouse: 123, ctrl+tab: 03, alt+tab: 04 
+[2013-03-19 20:35:14] Pattern (AK1021-9)
+						 key: 698, mouse: 27, ctrl+tab: 08, alt+tab: 04 
+[2013-03-19 20:45:14] Pattern (OY1215-4)
+						 key: 509, mouse: 103, ctrl+tab: 05, alt+tab: 02 
+[2013-03-19 20:55:31] Pattern (KS1022-5)
+[2013-03-19 21:02:48] Stop <--
+[2013-03-20 05:00:55] Start -->
+[2013-03-20 05:00:55] Stop <--
+[2013-03-20 05:00:55] Close GDollar!  (12 h : 18 m : 20 s)

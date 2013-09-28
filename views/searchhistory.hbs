@@ -1,0 +1,28 @@
+{{> _noplayer}}
+{{#contentFor "scripts"}}
+    <style>
+        body{
+        margin-top:110px;
+        }
+    </style>
+{{/contentFor}}
+{{#hassearches}}
+<table class="table table-condensed table-striped table-hover">
+<thead>
+<tr class="section-header">
+<th>Search string</th>
+</tr>
+</thead>
+
+<tbody>
+{{#../searches}}
+<tr>
+<td><a href="/search?q={{search}}">{{search}}</a></td>
+</tr>
+{{/../searches}}
+</tbody>
+</table>
+{{/hassearches}}
+{{^hassearches}}
+No track searches found!
+{{/hassearches}}

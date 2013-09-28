@@ -1,0 +1,92 @@
+{{> _headercommon}}
+
+{{#contentFor "scripts"}}
+    <!--
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+    -->
+    <script src="http://code.jquery.com/jquery-1.5.1.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery.thfloat-0.5.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+    <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.ui/1.8.6/jquery-ui.min.js"></script>
+	
+
+
+    <script src="/javascripts/soundmanagerv297a-20121104/script/soundmanager2.js"></script>
+    <script src="/javascripts/underscore-min.js"></script>
+    <script src="/javascripts/jquery.hotkeys.js"></script>
+    <script src="/javascripts/player.js"></script>
+    <script src="/javascripts/ratings.js"></script>
+    <script src="/javascripts/jquery.mousehold.js"></script>
+    <script src="/javascripts/jquery.columnfilters.js"></script>
+
+    <script src="/javascripts/bootstrap.js"></script>
+    <style>
+    #right_list2{
+        width: 100%;
+    }
+    </style>
+{{/contentFor}}
+
+{{#contentFor "topLeft"}}
+    <img src="/images/player-control-prevtrack.png" width="41px" height="66px" class="music-control music-control-prevtrack">
+    <img src="/images/player-control-playpause.png" width="66px" height="66px" class="music-control music-control-playpause">
+    <img src="/images/player-control-nexttrack.png" width="41px" height="66px" class="music-control music-control-nexttrack">
+{{/contentFor}}
+
+{{#contentFor "topRight"}}
+    <img src="/images/icon.png" width="77px" height="76px" style=" margin: 6px 15px 0 6px; float: left;">
+
+    <div class="music-ratings" style="display: none;">
+        <img class="music-control" src="/images/star-off.png">
+        <img class="music-control" src="/images/star-off.png">
+        <img class="music-control" src="/images/star-off.png">
+        <img class="music-control" src="/images/star-off.png">
+        <img class="music-control" src="/images/star-off.png">
+    </div>
+
+    <span class="music-track-nowplaying">Now playing:&nbsp;&nbsp;</span>
+    <span style="text-transform: capitalize;" class="music-track-title"></span><br>
+
+    <img src="/images/icon-favorite-off.png" width="24px" height="24px" class="music-control music-control-favorite-player" style="margin-left: 3px;"> Add/Remove from Favorites
+    <!-- <img src="/images/icon-comment.png" class="music-control music-control-comment" style="margin-left: 3px;"> Send Comment -->
+    <!-- <span class="icon-music"></span> <span class="music-type">Other</span> -->
+    <br>
+
+    <img src="/images/icon-time.png" style="padding-left:5px;"> <span class="music-track-length">00:00:00</span>
+    <img src="/images/icon-stems.png" style="padding-left:5px;"> Stems: <span class="music-track-stems"></span>
+    <img src="/images/icon-tempo.png" style="padding-left:5px;"> <span class="music-track-tempo"></span>
+    <img src="/images/icon-mood.png" style="padding-left:5px;"> <span class="music-track-mood"></span>
+{{/contentFor}}
+
+
+{{#contentFor "bottomLeft"}}
+    <img src="/images/control-sting-on.png" class="music-control music-control-sting" width="93px" height="33px" style="margin: 6px 9px 1px 7px;">
+    <img src="/images/control-addtopl.png" class="music-control music-control-addtopl"  width="93px" height="33px" style="margin: 6px 0 0 0;">
+    <img id="music_download" src="/images/control-download.png" class="music-control music-control-download"  width="93px" height="33px" style="margin: 6px 9px 0px 7px;">
+    <!-- <img src="/images/control-comment.png" class="music-control music-control-comments"  width="93px" height="33px" style="margin: 6px 0 0 0;">-->
+    <img src="/images/control-track-stem-off.png" class="music-control nostem music-control-stemlist"  width="93px" height="33px" style="margin: 6px 0 0 0;">
+{{/contentFor}}
+
+
+{{#contentFor "bottomRight"}}
+    <div class="music-wave-holder" style="position: relative; height: 83px;">
+        <img class="music-wave-off" style="position: absolute; top: 0; left: 0; height: 83px; pointer-events: none;">
+
+        <div class="music-wave-on-holder" style="position: absolute; top: 0px; left: 0; overflow: hidden; pointer-events: none;">
+            <img class="music-wave-on" style="height: 83px; pointer-events: none;">
+        </div>
+
+        <div class="music-wave-sting-holder" >
+        </div>
+
+        <div class="music-wave-error-holder" >
+            <!-- We are sorry, this file is not available now. -->
+        </div>
+
+        <div class="music-wave-marker" disabled="disabled"></div>
+
+        <div class="music-track-length" style="background: #e0e0e0; color: white; position: absolute; bottom: 0px; right: 0px;">00:00</div>
+    </div>
+{{/contentFor}}

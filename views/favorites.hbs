@@ -1,0 +1,17 @@
+{{> _player}}
+
+{{#contentFor "scripts"}}
+<script>
+    var audioTracks = {{{tracksjson}}};
+</script>
+{{/contentFor}}
+
+
+{{#contentFor "sidebar"}}
+{{> _sidebar_playlists}}
+{{/contentFor}}
+
+{{> _addtopl}}
+
+{{> _tracklist}}
+

@@ -1,0 +1,48 @@
+{{> _noplayer}}
+
+{{#contentFor "scripts"}}
+    <style>
+        body{
+            margin-top:111px;
+        }
+        #bar_browse{
+            display:none !important;
+        }
+    </style>
+{{/contentFor}}
+
+{{#contentFor "sidebar"}}
+{{> _sidebar_playlists}}
+{{/contentFor}}
+
+
+
+{{#hashistory}}
+<table class="table table-condensed table-striped table-hover">
+    <thead>
+        <tr class="section-header">
+            <th>Date</th>
+            <th>Track name</th>
+            <th>Playlist name</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#../history}}
+        <tr>
+            <td>{{created_on}}</td>
+            <td style="text-transform: capitalize;">{{track_title_pretty}}</td>
+            <td>{{name}}</td>
+        </tr>
+        {{/../history}}
+    </tbody>
+
+</table>
+{{/hashistory}}
+
+{{^hashistory}}
+<div style="padding: 20px 20px 0 20px;">
+There is no download history!
+</div>
+{{/hashistory}}
+

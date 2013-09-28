@@ -1,0 +1,23 @@
+{{> _player}}
+
+{{#contentFor "scripts"}}
+<script src="/javascripts/search.js"></script>
+
+<script>
+    var audioTracks = {{{tracksjson}}};
+</script>
+{{/contentFor}}
+
+<style>
+    form select {
+        width: 185px;
+    }
+</style>
+
+{{#contentFor "sidebar"}}
+{{> _sidebar_search}}
+{{/contentFor}}
+{{> _addtopl}}
+
+{{> _tracklist}}
+

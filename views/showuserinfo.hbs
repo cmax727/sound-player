@@ -1,0 +1,53 @@
+{{> _noplayer}}
+
+
+<div style="padding: 15px 25px;">
+
+    <form method="post" class="form-horizontal">
+        <div class="control-group">
+            <label class="control-label" for="inputName">Name</label>
+            <div class="controls">
+                <input type="text" id="name" name="name" placeholder="Your name" value="{{name}}">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="inputCompany">Company</label>
+            <div class="controls">
+                <input type="text" id="company" name="company" placeholder="Company name" value="{{company}}">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="inputPhone">Phone</label>
+            <div class="controls">
+                <input type="text" id="phone" name="phone" placeholder="Contact phone" value="{{phone}}">
+            </div>
+        </div>
+
+        
+        If you want to change your password as well, enter new password into
+        both fields below.<br><br>
+
+
+        <div class="control-group">
+            <label class="control-label" for="inputPassword1">Password</label>
+            <div class="controls">
+                <input type="password" id="inputPassword1" name="pass1" placeholder="Password">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <div class="controls">
+                <input type="password" id="inputPassword2" name="pass2" placeholder="Same password again">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <div class="controls">
+                <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </form>
+
+</div>

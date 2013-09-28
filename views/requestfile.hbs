@@ -1,0 +1,24 @@
+{{#contentFor "sidebar"}}
+{{> _sidebar_playlists}}
+{{/contentFor}}
+
+<div id="download_dialog" style="padding: 20px;">
+<h2>Downloading "<span style="text-transform: capitalize;">{{title}}</span>"</h2>
+
+For direct download, click on either the <a href="/download/transfer/track/{{id}}/0"><button  class="btn">MP3</button></a> or <a href="/download/transfer/track/{{id}}/1"><button class="btn">AIFF</button></a> download links.<br><br>
+
+<form method="post">
+    For an e-mailed link, please choose the format for the download:<br>
+
+    <input type="radio" name="format" value="0" checked="checked"> MP3<br>
+    <input type="radio" name="format" value="1"> AIFF<br><br>
+
+    Please enter the e-mail address to which you want to send the download link:<br><br>
+
+    <input type="hidden" id="trackid" name="trackid" value="{{id}}">
+    <input type="text" name="target" value="{{target}}"><br><br>
+
+    <button type="submit" class="btn btn-primary">Send download info</button>
+</form>
+
+</div>

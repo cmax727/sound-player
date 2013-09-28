@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+
+<html lang="en-us">
+<head>
+    <title>Signature Tracks | Signature Player</title>
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8, min-scale=0.8">
+
+    <link href="/stylesheets/bootstrap.css" rel="stylesheet">
+    <link href="/stylesheets/music.css" rel="stylesheet">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    {{{block "scripts"}}}
+</head>
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    {{{block "header_block"}}}
+
+    <div class="navbar-inner">
+        <div class="container-fluid music-navbar">
+
+            <div class="nav-logo"><img src="/images/logo.png">
+                <!-- <div style="display:block;float:right">SIGNATURE <font color="white">TRACKS</font><br/>
+                    <a href="#" style="color:#0386C8 !important;">Cutting Edge Music Selects For TV and Flim</a></div> -->
+            </div>
+            <ul class="nav">
+                <li><a href="/dashboard">Browse<br/>Categories</a></li>
+                <li><a href="/playlist">Personal<br/>Playlists</a></li>
+				<li><a href="/userinfo">User<br/>Settings</a></li>
+                <li><a href="/downloadhistory">Downloads<br/>History</a></li>
+                <li><a href="/searchhistory">Search<br/>History</a></li>
+
+                <li class="search">
+                    <form class="navbar-search pull-right" method="get" action="/search">
+                        <input type="text" class="search-query" placeholder="Search tracks" name="q">
+                    </form>
+                </li>
+            </ul>
+        </div>
+
+        <div class="music-header-top">
+            <div class="music-player-controls music-sidebar">
+                {{{block "topLeft"}}}
+            </div>
+
+            <div class="container-fluid music-player-info music-content">
+                {{{block "topRight"}}}
+            </div>
+        </div>
+
+        <div class="music-header-bottom">
+            <div class="music-sidebar" style="height: 83px; border-top: 1px solid black; border-right: 1px solid black; ">
+                {{{block "bottomLeft"}}}
+            </div>
+
+            <div class="music-content" style="height: 83px; border-top: 1px solid black; background: #d6d9db;">
+                {{{block "bottomRight"}}}
+            </div>
+        </div>
+    </div>
+
+    <div id="bar_browse" style="display:none;height:90px; width:100%;background-color:#f2f2f2;">
+        <p class="txt_browse" >Browse by Genre</p>
+        <p class="txt_category" >Select a Category to View Sub-Categories</p>
+    </div>
+
+</div>
+
+<div class="music-sidebar music-sidebar-border">
+    {{{block "sidebar"}}}
+</div>
+
+<div class="music-content">
+    <div id="bar_sub" class="nav-header section-header" style="display:none"> </div>
+    <div id="right_list1" class="right_list" style="display:none;">
+        <ul>
+            {{{block "top_genres"}}}
+        </ul>
+    </div>
+    <div id="right_list2"  class="right_list">
+        <ul>
+            {{{body}}}
+        </ul>
+    </div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,8 @@
+<ul class="nav nav-list">
+    <li class="nav-header">My playlists</li>
+
+    <li><a href="/favorites">My favorites</a></li>
+    {{#playlists}}
+    <li class="{{active}}"><a href="/playlist/{{id}}">{{name}}</a></li>
+    {{/playlists}}
+</ul>

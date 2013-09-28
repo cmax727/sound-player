@@ -1,0 +1,63 @@
+{{#contentFor "scripts"}}
+    <script src="/javascripts/favorites.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery.thfloat.js.html"></script>
+	<script type="text/javascript" src="/javascripts/jquery-latest.js"></script> 
+<script type="text/javascript" src="/javascripts/jquery.tablesorter.js"></script> 
+{{/contentFor}}
+
+<script>
+$("#floater")
+  .thfloat({
+     side : "head",
+     attachment : "#scroller"
+  })
+</script>
+
+
+{{#hastracks}}
+    <div id="scroller" style="height: 100%; overflow: auto;">
+	<table class="table table-condensed table-striped table-hover music-track-table" id="floater" width="100%">
+        <thead>
+        <tr class="section-header">
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Track Type</th>
+            <th style="display:none">Mood</th>
+            <th style="display:none">Instrument</th>
+            <th>Length</th>
+            <th>Tempo</th>
+            <th><img src="/images/icon-favorite-top.png" class="track-list-h-favor"></th>
+        </tr>
+        </thead>
+
+        <tbody>
+            {{#../tracks}}
+            <tr trackid="{{id}}" class= "track-row">
+                <td style="text-transform: capitalize;">{{track_title_pretty}}</td>
+                <td style="text-transform: capitalize;">{{genre_pretty}}</td>
+                <td>{{type}}</td>
+                <td style="display:none">{{mood}}</td>
+                <td style="display:none">{{instrument}}</td>
+                <td>{{_length length}}</td>
+                <td>{{tempo}}</td>
+                <td>
+                    {{#if idfavor}}
+                        <img src="/images/icon-favorite-on.png" width="24px" height="24px" class="music-control music-control-favorite">
+                    {{else}}
+                        <img src="/images/icon-favorite-off.png" width="24px" height="24px" class="music-control music-control-favorite">
+                    {{/if}}
+
+
+                    <i class="icon-white icon-remove-sign hide music-control control-remove"></i>
+                </td>
+            </tr>
+            {{/../tracks}}
+        </tbody>
+
+    </table>
+	</div>
+{{/hastracks}}
+{{^hastracks}}
+    No tracks found!
+{{/hastracks}}
+

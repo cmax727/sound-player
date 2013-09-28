@@ -1,0 +1,56 @@
+{{> _noplayer}}
+{{#contentFor "scripts"}}
+    <style>
+        body{
+           margin-top: 206px;
+        }
+        .music-sidebar
+		{
+        }
+
+        #bar_browse{
+            display:block !important;
+            margin-Left:-1px;
+        }
+        #bar_sub{
+            display:block !important;
+            margin-Left:-1px;
+        }
+        .music-content{
+            width:auto;
+        }
+        #right_list1{
+            width:30%;
+        }
+        #right_list2{
+            width:70%;
+        }
+    </style>
+{{/contentFor}}
+
+{{#contentFor "sidebar"}}
+
+<ul class="nav nav-list">
+    <li class="nav-header section-header">My playlists</li>
+    <li><a href="/favorites">My favorites</a></li>
+    {{#playlists}}
+        <li><a href="/playlist/{{id}}">{{name}}</a></li>
+    {{/playlists}}
+
+
+</ul>
+
+{{/contentFor}}
+
+{{#contentFor "top_genres"}}
+<h4>  Main Genre</h4>
+    {{#top_genres}}
+        <li  class="{{class}}"><a href="/dashboard/{{top_genre}}">{{top_genre}}</a></li>
+    {{/top_genres}}
+
+{{/contentFor}}
+
+<h4>  Sub Genre</h4>
+{{#genres}}
+<li><a href="/genre/{{genre}}">{{genre}}</a></li>
+{{/genres}}

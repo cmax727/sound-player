@@ -1,0 +1,46 @@
+    <ul class="nav nav-list s-playlist">
+        <span class="nav-header section-header">My playlists</span>
+        <li><a href="/favorites">My favorites</a></li>
+        {{#playlists}}
+            <li><a href="/playlist/{{id}}">{{name}}</a></li>
+        {{/playlists}}
+    </ul>
+    <ul class="nav nav-list s-fresult">
+        <span class="nav-header section-header">Filter results</span>
+        <form method="get">
+
+            <li>Instrument:
+                <div style="float: right;">
+                    <select name="instrument" class="search-filter-instrument" style="font-size: 10px; width: 185px;">
+                        <option value="">-</option>
+                        {{#instruments}}
+                            <option value="{{instrument}}" {{selected}}>{{instrument}}</option>
+                        {{/instruments}}
+                    </select>
+                </div>
+            </li>
+
+            <li>Tempo:
+                <div style="float: right;">
+                    <select name="tempo" class="search-filter-tempo" style="font-size: 10px; width: 185px;">
+                        <option value="">-</option>
+                        {{#tempos}}
+                            <option value="{{tempo}}" {{selected}}>{{tempo}}</option>
+                        {{/tempos}}
+                    </select>
+                </div>
+            </li>
+
+            <li>Type:
+                <div style="float: right;">
+                    <select name="type" class="search-filter-type" style="font-size: 10px; width: 185px;">
+                        <option value="">-</option>
+                        {{#types}}
+                            <option value="{{type}}" {{selected}}>{{type}}</option>
+                        {{/types}}
+                    </select>
+                </div>
+            </li>
+        </form>
+    </ul><br><br>
+

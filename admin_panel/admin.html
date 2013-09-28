@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SignatureTracks ManagementInterface</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Wolf Merkt, www.fdbck.io">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="./stylesheets/bootstrap_admin.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container" style="width:600px;">
+      <div class="page-header">
+        <h1>SignatureTracks</h1>
+      </div>
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#ManageUsers" data-toggle="tab">Manage Users</a></li>
+        <li><a href="#ManageTracks" data-toggle="tab">Manage Tracks</a></li>
+        <li><a href="#GlobalActivity" data-toggle="tab">Global Activity</a></li>
+      </ul>
+      <div class="tabbable">
+        <div class="tab-content">
+          <div class="tab-pane active" id="ManageUsers">
+            <a href="#modalAddUser" role="button" data-toggle="modal" class="btn btn-success pull-right">Add User &raquo;</a>
+            <br style="clear:both;" />
+            <p>Click on a user to view their playlist and search history.</p>
+            <table class="table table-bordered table-striped table-hover table-user">
+              <thead>
+                <tr>
+                  <th>User Name</th>
+                  <th>Name</th>
+                  <th>Email address</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr href="#modalUser" role="button" data-toggle="modal">
+                  <td>admin</td>
+                  <td>Admin</td>
+                  <td>admin@signaturetracks.com <span class="pull-right" style="color:red;font-weight:bold;">×</span></td>
+                </tr>
+                <tr>
+                  <td>admin</td>
+                  <td>Admin</td>
+                  <td>admin@signaturetracks.com <span class="pull-right" style="color:red;font-weight:bold;">×</span></td>
+                </tr>
+                <tr>
+                  <td>admin</td>
+                  <td>Admin</td>
+                  <td>admin@signaturetracks.com <span class="pull-right" style="color:red;font-weight:bold;">×</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tab-pane" id="ManageTracks">
+            <h4>Upload Track Data</h4>
+            <form action="/api/trackdata" enctype="multipart/form-data" method="POST" style="display:inline;" id="manageTrackData">
+              <input type="file" name="trackdata" style="width:125px">
+
+              <select name="action" style="width:170px;position: relative;top: 5px;">
+                <option value="replace"><span style="font-weight:bold;color:red;">Replace</span> Track Data</option>
+                <option value="update"><span style="font-weight:bold;color:green;">Update</span> Track Data</option>
+              </select>
+              
+              <input type="submit" class="btn pull-right" value="Upload Data File &raquo;">
+            </form>
+
+            <hr>
+
+            <h4>Upload MP3 Tracks<small> (Hold Ctrl to select multiple tracks)</small></h4>
+            <form action="/upload" enctype="multipart/form-data" style="display:inline;" method="POST">
+              <input type="file" name="file" id="_tracks" style="width:140px" multiple accept="audio/mp3">
+             
+              <input type="submit" id="uploadTracksAction" class="btn pull-right" value="Generate waves &amp; AIFF &raquo;">
+            </form>
+            <br /><div id="uploadProgressBars"></div>
+            
+            <hr style="clear:both;">
+
+            <p>
+              <input type="text" name="searchfield" class="search-query span2" placeholder="Begin Search...">
+              &nbsp;&nbsp;&nbsp;Click on a track to edit track data.
+            </p>
+            <table class="table table-bordered table-striped table-hover table-tracklist">
+              <thead>
+                <tr>
+                  <th>Track Name</th>
+                  <th>Genre</th>
+                  <th>Track Type</th>
+                  <th>Tempo</th>
+                  <th>Keywords</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr href="#modalEditTrack" role="button" data-toggle="modal">
+                  <td>Hot_Track_Name.mp3</td>
+                  <td>Rock - Classic</td>
+                  <td>Vocal</td>
+                  <td>Up-Beat</td>
+                  <td>Opening</td>
+                </tr>
+                <tr>
+                  <td>Hot_Track_Name.mp3</td>
+                  <td>Rock - Classic</td>
+                  <td>Vocal</td>
+                  <td>Up-Beat</td>
+                  <td>Opening</td>
+                </tr>
+                <tr>
+                  <td>Hot_Track_Name.mp3</td>
+                  <td>Rock - Classic</td>
+                  <td>Vocal</td>
+                  <td>Up-Beat</td>
+                  <td>Opening</td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="paginator" style="margin:0 auto;"></div>
+          </div>
+          <div class="tab-pane" id="GlobalActivity">
+            <h4>Top 10 Search Terms</h4>
+            <div class="top10-searchterms">
+              <span class="badge badge-inverse">Keyword #1</span>
+              <span class="badge badge-inverse">Keyword #2</span>
+              <span class="badge badge-inverse">Keyword #3</span>
+              <span class="badge badge-inverse">Keyword #4</span>
+              <span class="badge badge-inverse">Keyword #5</span>
+              <span class="badge badge-inverse">Keyword #6</span>
+              <span class="badge badge-inverse">Keyword #7</span>
+              <span class="badge badge-inverse">Keyword #8</span>
+              <span class="badge badge-inverse">Keyword #9</span>
+              <span class="badge badge-inverse">Keyword #10</span>
+            </div>
+            
+            <hr>
+            <div class="row-fluid">
+              <div class="span6">
+                <h4>Search History - Last 100</h4>
+                <table class="table table-striped table-search-last100">
+                  <thead>
+                    <tr>
+                      <th>Search Term</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Closing Scene</td>
+                    </tr>
+                    <tr>
+                      <td>Closing Scene</td>
+                    </tr>
+                    <tr>
+                      <td>Closing Scene</td>
+                    </tr>
+                    <tr>
+                      <td>Closing Scene</td>
+                    </tr>
+                    <tr>
+                      <td>Closing Scene</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <a href="/api/search/last100.csv" class="btn">Download List &raquo;</a>
+              </div>
+
+              <div class="span6">
+                <h4>Download History - Top 100</h4>
+                <table class="table table-striped table-downloads-top100">
+                  <thead>
+                    <tr>
+                      <th>Track Name</th>
+                      <th>Count</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Hot_Track_Name.mp3</td>
+                      <td>18</td>
+                    </tr>
+                    <tr>
+                      <td>Hot_Track_Name.mp3</td>
+                      <td>18</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <a href="/api/downloads/top100.csv" class="btn">Download List &raquo;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /tabbable -->
+
+    </div><!-- /container -->
+
+<!-- Modal -->
+<div id="modalUser" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">User: admin</h3>
+  </div>
+  <div class="modal-body">
+    <div class="row-fluid">
+      <div class="span6">
+        <table class="table table-striped table-searches">
+          <thead>
+            <tr>
+              <th>Recent Searches</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Closing Scene</td>
+            </tr>
+            <tr>
+              <td>Closing Scene</td>
+            </tr>
+            <tr>
+              <td>Closing Scene</td>
+            </tr>
+            <tr>
+              <td>Closing Scene</td>
+            </tr>
+            <tr>
+              <td>Closing Scene</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="span6">
+        <table class="table table-striped table-playlists">
+          <thead>
+            <tr>
+              <th>Playlists</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Closing Scene</td>
+            </tr>
+            <tr>
+              <td>Closing Scene</td>
+            </tr>
+            <tr>
+              <td>Closing Scene</td>
+            </tr>
+            <tr>
+              <td>Closing Scene</td>
+            </tr>
+            <tr>
+              <td>Closing Scene</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>
+
+<div id="modalEditTrack" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Editing: Hot_Track_Name.mp3</h3>
+  </div>
+  <form id="editTrack">
+    <input type="hidden" name="id">
+  <div class="modal-body">
+    <div class="row-fluid">
+      <div class="span4">
+        <h4>Track Name</h4>
+        <input type="text" name="track_title" style="width:150px;" value="Hot_Track_Name.mp3">
+        <h4>Artist/Composer</h4>
+        <input type="text" name="artist_composer" style="width:150px;" value="--">
+        <h4>Type</h4>
+        <input type="text" name="type" style="width:150px;" value="Vocal">
+        <h4>Genre</h4>
+        <input type="text" name="genre" style="width:150px;" value="Rock - Classic">
+      </div>
+
+      <div class="span4">
+        <h4>Sub-Genre 1</h4>
+        <input type="text" name="subgenre_1" style="width:150px;" value="--">
+        <h4>Key Instrument</h4>
+        <input type="text" name="instrument" style="width:150px;" value="Guitar">
+        <h4>Tempo</h4>
+        <select name="tempo" style="width:150px;"></select>
+        <h4>Mood</h4>
+        <input type="text" name="mood" style="width:150px;" value="Relaxed">
+      </div>
+
+      <div class="span4">
+        <h4>Scene</h4>
+        <input type="text" name="scene" style="width:150px;" value="Sexy Open">
+        <h4>Sound-Alike</h4>
+        <input type="text" name="sound-alike" style="width:150px;" value="Usher">
+        <h4>Keywords</h4>
+        <input type="text" name="keywords" style="width:150px;" value="Love, Sexy, Low key">
+        <h4>Parent Track</h4>
+        <input type="text" name="parent_track_title" style="width:150px;" value="Hot_Track_Full-Mix.mp3">
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <input type="submit" class="btn btn-primary" value="Save Changes" />
+  </div>
+  </form>
+</div>
+
+<div id="modalAddUser" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <form name="addUser" method="POST">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Create New User</h3>
+  </div>
+  <div class="modal-body">
+    <div class="row-fluid">
+      <div class="span2">&nbsp;</div>
+      <div class="span4">
+        <h4>Username</h4>
+        <input type="text" name="username" style="width:150px;" placeholder="Username">
+        <h4>Name</h4>
+        <input type="text" name="name" style="width:150px;" placeholder="Name">
+      </div>
+      <div class="span4">
+        <h4>Email address</h4>
+        <input type="email" name="email" style="width:150px;" placeholder="Email address">
+        <h4>Password</h4>
+        <input id="createUserPassword" type="password" name="password" style="width:150px;" placeholder="Password">
+      </div>
+      <br style="clear:both">
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <input type="submit" class="btn btn-primary" value="Add User" />
+  </div>
+  </form>
+</div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <script src="./javascripts/jquery.min.js"></script>
+    <script src="./javascripts/bootstrap.min.js"></script>
+    <script src="./javascripts/alertify.min.js"></script>
+    <script src="./javascripts/bootstrap-paginator.min.js"></script>
+    <script src="./javascripts/admininterface.js"></script>
+    <link rel="stylesheet" href="./stylesheets/alertify.core.css" />
+    <link rel="stylesheet" href="./stylesheets/alertify.bootstrap.css" />
+  </body>
+</html>

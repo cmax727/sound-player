@@ -1,0 +1,71 @@
+{{#contentFor "scripts"}}
+<script src="/javascripts/addtopl.js"></script>
+{{/contentFor}}
+
+<div id="dialog_addtopl" class="modal hide fade music-dialog-addtopl">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Add track to playlist</h3>
+    </div>
+    <input type="hidden" class="track-id" value="">
+    <div class="modal-body">
+        Select playlist to add "<span style="text-transform: capitalize;" class="track-title"></span>"<br><br>
+
+        <select>
+            {{#playlists}}
+                <option value="{{id}}">{{name}}</option>
+            {{/playlists}}
+            <option value="_">New Playlist</option>
+        </select>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal">Close</button>
+        <button class="btn btn-success">Add to playlist</button>
+    </div>
+</div>
+
+<!-- download track dialog-->
+<div id="dialog_downloadtrack"  class="modal hide fade music-dialog-request">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Download track</h3>
+    </div>
+    <div class="modal-body">
+        <h2>Downloading "<span id="dl-title" style="text-transform: capitalize;"></span>"</h2>
+        Download now; click on either the <a id="dl-link-mp3" href="/download/transfer/track/{{id}}/0"><button  class="btn">MP3</button></a> or <a id="dl-link-aiff" href="/download/transfer/track/{{id}}/1"><button class="btn">AIFF</button></a> download links.<br><br>
+
+        <form method="post" action="/download/playlist/"style="padding:20px;">
+            Send to yourself or share this track, please select the format for the download:<br>
+
+            <input type="radio" name="format" value="0" checked="checked"> MP3<br>
+            <input type="radio" name="format" value="1"> AIFF<br><br>
+
+            Where should we email the download link:<br><br>
+            <input type="hidden" name="type" value="ajax">
+            <input type="hidden" id="dl-trackid" name="trackid" value="{{id}}">
+            <input type="text" name="target" value="{{user.email}}"><br><br>
+
+            <button type="" class="btn btn-primary">Send download info</button>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal">Close</button>
+    </div>
+</div>
+
+<!-- create new playlist -->
+<div class="modal hide fade playlist-create-dialog">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Create a playlist</h3>
+    </div>
+    <div class="modal-body">
+        Enter the new playlist's name<br><br>
+
+        <input type="text" id="pl_name" name="name">
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal">Close</button>
+        <button class="btn btn-primary">Create playlist</button>
+    </div>
+</div>

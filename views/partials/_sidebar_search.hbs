@@ -1,0 +1,71 @@
+<div class="lists">
+    <ul class="nav nav-list s-playlist">
+        <span class="nav-header section-header">My playlists</span>
+        <li><a href="/favorites">My favorites</a></li>
+        {{#playlists}}
+            <li><a href="/playlist/{{id}}">{{name}}</a></li>
+        {{/playlists}}
+
+    </ul>
+
+    <ul class="nav nav-list s-ssearch">
+        <li class="nav-header section-header">Similar searches</li>
+        {{#searches}}
+            <li><a href="/search?q={{search}}">{{search}}</a></li>
+        {{/searches}}
+        {{^searches}}
+            <span class="label" style="margin: 10px 0;">No similar searches</span>
+        {{/searches}}
+    </ul>
+
+    <ul class="nav nav-list s-fresult">
+        <span class="nav-header section-header">Filter results</span>
+        <form method="get">
+            <input type="hidden" name="q" value="{{search}}">
+
+            <li>Genre:
+                <div style="float: right; ">
+                    <select name="genre" class="search-filter-genre" style="font-size: 10px;">
+                        <option value="">-</option>
+                        {{#genres}}
+                            <option value="{{genre}}" {{selected}}>{{genre}}</option>
+                        {{/genres}}
+                    </select>
+                </div>
+            </li>
+
+            <li>Instrument:
+                <div style="float: right;">
+                    <select name="instrument" class="search-filter-instrument" style="font-size: 10px;">
+                        <option value="">-</option>
+                        {{#instruments}}
+                            <option value="{{instrument}}" {{selected}}>{{instrument}}</option>
+                        {{/instruments}}
+                    </select>
+                </div>
+            </li>
+
+            <li>Tempo:
+                <div style="float: right;">
+                    <select name="tempo" class="search-filter-tempo" style="font-size: 10px;">
+                        <option value="">-</option>
+                        {{#tempos}}
+                            <option value="{{tempo}}" {{selected}}>{{tempo}}</option>
+                        {{/tempos}}
+                    </select>
+                </div>
+            </li>
+
+            <li>Type:
+                <div style="float: right;">
+                    <select name="type" class="search-filter-type" style="font-size: 10px;">
+                        <option value="">-</option>
+                        {{#types}}
+                            <option value="{{type}}" {{selected}}>{{type}}</option>
+                        {{/types}}
+                    </select>
+                </div>
+            </li>
+        </form>
+    </ul><br><br>
+</div>
